@@ -736,6 +736,7 @@ export const loadData = async () => {
     loadPrefabs();
     loadItems();
     loadItemSets();
+	loadGraffitiTints();
     loadStickerKits();
     loadPaintKits();
     loadMusicDefinitions();
