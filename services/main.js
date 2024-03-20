@@ -44,6 +44,17 @@ export const loadStickerKits = () => {
     );
 };
 
+export const loadGraffitiTints = () => {
+	state.graffitiTints = Object.entries(state.itemsGame.graffiti_tints).map(
+		([key, item]) => {
+			return {
+				...item,
+				key: `Attrib_SprayTintValue_${item.id}`,
+			};
+		}
+	);
+};
+
 export const loadItems = () => {
     state.items = Object.entries(state.itemsGame.items).reduce(
         (acc, [key, value]) => {
